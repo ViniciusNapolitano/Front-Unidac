@@ -1,38 +1,216 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.secHome {
+  width: 100%;
+  height: 100vh;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.secHome div {
+  width: 500px;
+  left: 8rem;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.secHome div h1 {
+  position: absolute;
+  top: 20rem;
+  left: 10rem;
+  color: #fff;
+  z-index: 500;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+}
+
+.secHome div p {
+  position: absolute;
+  top: 22rem;
+  left: 10rem;
+  color: #fff;
+  z-index: 500;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+figure div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+  z-index: 700;
+}
+
+header ul {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+header ul a {
+  cursor: pointer;
+  transition: .7s;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+}
+
+header ul a:hover {
+  color: #e97c08;
+}
+
+.secForm {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.formPost {
+  width: 600px;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, #e97c08, #e98d2b);
+  border-radius: 30px 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formPost h1 {
+  color: #fff;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+}
+
+.formPost label {
+  color: #fff;
+  margin-top: 1.5rem;
+}
+
+.formPost input {
+  margin-top: .5rem;
+  width: 300px;
+  height: 1.5rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+  border-radius: 5px;
+  border-style: none;
+}
+
+.validacao {
+  color: red;
+}
+
+.formPost button, .btnAtualizar, .btnEditar, .btnDeletar {
+  width: 100px;
+  height: 2rem;
+  margin-top: 1.5rem;
+  background-color: #fff;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.formPost button:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+.btnAtualizar:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+.btnEditar:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+.btnDeletar:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+.secGet {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.secGet .divGet {
+  width: 1000px;
+  min-height: 600px;
+  background-image: linear-gradient(to bottom right, #e97c08, #e98d2b);
+  border-radius: 30px 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.grpBotoes button {
+  margin: 0 20px;
+}
+
+.secGet div h1 {
+  color: #fff;
+  text-align: center;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+}
+
+table {
+  width: 85%;
+  color: #000;
+  background-color: #fff;
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+td {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
